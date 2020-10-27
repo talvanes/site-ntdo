@@ -1,10 +1,10 @@
 /* Main header */
 .main_header {
-  composes: bg-white from "../styles/colors.module.css";
+  composes: bg-white from "@/styles/colors.module.css";
 }
 
 .main_header_content {
-  composes: container from "../styles/utils.module.css";
+  composes: container from "@/styles/utils.module.css";
 
   padding-top: 0.6em;
   padding-bottom: 0.6em;
@@ -14,7 +14,7 @@
 
 /* Main footer */
 .main_footer {
-  composes: bg-white text-black from "../styles/colors.module.css";
+  composes: bg-white text-black from "@/styles/colors.module.css";
 
   padding-bottom: 8.1em;
   padding-top: 8.1em;
@@ -25,7 +25,7 @@
 }
 
 .main_footer_content {
-  composes: container from "../styles/utils.module.css";
+  composes: container from "@/styles/utils.module.css";
 
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .main_footer_links, .main_footer_legal {
-  composes: body-paragraph from "../styles/typography.module.css";
+  composes: body-paragraph from "@/styles/typography.module.css";
 
   width: 13rem;
 }
@@ -43,9 +43,9 @@
 }
 
 .main_footer_rights {
-  composes: container from "../styles/utils.module.css";
-  composes: bg-white text-black from "../styles/colors.module.css";
-  composes: body-paragraph-small from "../styles/typography.module.css";
+  composes: container from "@/styles/utils.module.css";
+  composes: bg-white text-black from "@/styles/colors.module.css";
+  composes: body-paragraph-small from "@/styles/typography.module.css";
 
   padding-top: 1.3em;
   padding-bottom: 1.3em;
