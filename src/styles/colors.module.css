@@ -1,0 +1,50 @@
+/* Text colors */
+.text-default {
+  color: #524d4e;
+}
+
+.text-white {
+  color: #f9f9f9;
+}
+
+.text-grey {
+  color: #e4e3e6;
+}
+
+.text-black {
+  color: #151d16;
+}
+
+/* Background colors */
+.bg-default {
+  background-color: #524d4e;
+}
+
+.bg-white {
+  background-color: #f9f9f9;
+}
+
+.bg-grey {
+  background-color: #e4e3e6;
+}
+
+.bg-black {
+  background-color: #151d16;
+}
+
+.bg-brand {
+  background-color: #990505;
+}
+
+/* Border colors */
+.border-default {
+  border: 1px solid #524d4e;
+}
+
+.border-white {
+  border: 1px solid #f9f9f9;
+}
+
+.border-black {
+  border: 1px solid #151d16;
+}

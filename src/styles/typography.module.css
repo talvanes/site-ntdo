@@ -1,0 +1,69 @@
+.hero-title {
+  font-weight: 400;
+  font-size: 5.6em;
+  line-height: 8.0em;
+}
+
+.hero-subtitle {
+  font-weight: 500;
+  font-size: 4.8em;
+  line-height: 7.2em;
+}
+
+.subpage-title {
+  font-weight: 400;
+  font-size: 4.8em;
+  line-height: 7.2em;
+}
+
+.body-title {
+  font-weight: 700;
+  font-size: 3.6em;
+  line-height: 4.8em;
+  text-transform: capitalize;
+}
+
+.body-title-small {
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 3.6em;
+}
+
+.body-paragraph {
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 3.0em;
+}
+
+.body-paragraph-large {
+  font-weight: 400;
+  font-size: 3.6em;
+  line-height: 5.0em;
+}
+
+.body-paragraph-small {
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 2.2em;
+}
+
+.body-text-cta-button {
+  font-weight: 700;
+  font-size: 2.0em;
+  line-height: 3.0em;
+}
+
+.menu-text {
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.input-text {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 2.4em;
+}
+
+
+

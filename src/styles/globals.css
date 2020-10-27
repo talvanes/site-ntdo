@@ -1,0 +1,23 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  color: #524d4e;
+
+  font-size: 0.625em;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.015em;
+  text-rendering: optimizeLegibility !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button {
+  outline: none;
+}
