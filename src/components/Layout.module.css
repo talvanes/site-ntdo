@@ -1,0 +1,58 @@
+/* Main header */
+.main_header {
+  composes: bg-white from "../styles/colors.module.css";
+}
+
+.main_header_content {
+  composes: container from "../styles/utils.module.css";
+
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+
+  display: flex;
+}
+
+/* Main footer */
+.main_footer {
+  composes: bg-white text-black from "../styles/colors.module.css";
+
+  padding-bottom: 8.1em;
+  padding-top: 8.1em;
+}
+
+.main_footer a {
+  color: #151d16;
+}
+
+.main_footer_content {
+  composes: container from "../styles/utils.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_footer_links, .main_footer_legal {
+  composes: body-paragraph from "../styles/typography.module.css";
+
+  width: 13rem;
+}
+
+.main_footer_legal {
+  margin-top: 8.5em;
+}
+
+.main_footer_rights {
+  composes: container from "../styles/utils.module.css";
+  composes: bg-white text-black from "../styles/colors.module.css";
+  composes: body-paragraph-small from "../styles/typography.module.css";
+
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  border-top: 1px solid #E4E3E6;
+  text-align: center;
+}
+
+.main_footer_rights a {
+  color: #990505;
+}
