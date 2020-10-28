@@ -20,10 +20,6 @@
   padding-top: 8.1em;
 }
 
-.main_footer a {
-  color: #151d16;
-}
-
 .main_footer_content {
   composes: container from "@/styles/utils.module.css";
 
@@ -36,6 +32,7 @@
   composes: body-paragraph from "@/styles/typography.module.css";
 
   width: 13rem;
+  flex: 1 0 auto;
 }
 
 .main_footer_legal {
@@ -43,7 +40,6 @@
 }
 
 .main_footer_rights {
-  composes: container from "@/styles/utils.module.css";
   composes: bg-white text-black from "@/styles/colors.module.css";
   composes: body-paragraph-small from "@/styles/typography.module.css";
 
