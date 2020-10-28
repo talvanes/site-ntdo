@@ -25,7 +25,6 @@ export default function Layout({ children }: LayoutProps) {
 
     {/* Main Footer */}
     <section className={styles.main_footer}>
-
       <div className={styles.main_footer_content}>
         {/* Nossas Páginas */}
         <article className={styles.main_footer_links}>

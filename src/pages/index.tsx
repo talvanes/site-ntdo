@@ -1,7 +1,6 @@
-import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-
-import styles from "@/styles/utils.module.css";
+import Layout from "@/components/Layout";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
@@ -13,9 +12,10 @@ export default function Home() {
     />
 
     <Layout>
-      <div className={styles.container}>
-        <h1>Hello, World!</h1>
-      </div>
+      {/* Hero Section */}
+      <Hero title="nTDO" subtitle="Do Nada Ao Tudo" />
+
+      {/* TODO Seção "Sobre Nós" */}
     </Layout>
     </>
   )

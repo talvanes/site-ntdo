@@ -1,0 +1,31 @@
+.hero_container {
+  composes: bg-default text-grey from "../styles/colors.module.css";
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_background {
+  width: 100%;
+}
+
+.hero_content {
+  composes: container from "../styles/utils.module.css";
+
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_content_title {
+  composes: text-white from "../styles/colors.module.css";
+  composes: hero-title from "../styles/typography.module.css";
+}
+
+.hero_content_subtitle {
+  composes: hero-subtitle from "../styles/typography.module.css";
+
+  text-transform: capitalize;
+}

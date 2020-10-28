@@ -1,13 +1,11 @@
 .hero-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 5.6em;
-  line-height: 8.0em;
 }
 
 .hero-subtitle {
-  font-weight: 500;
-  font-size: 4.8em;
-  line-height: 7.2em;
+  font-weight: 400;
+  font-size: 3.25em;
 }
 
 .subpage-title {
