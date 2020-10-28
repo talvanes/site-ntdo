@@ -29,7 +29,7 @@
 }
 
 .main_footer_links, .main_footer_legal {
-  composes: body-paragraph from "@/styles/typography.module.css";
+  composes: link-text from "@/styles/typography.module.css";
 
   width: 13rem;
   flex: 1 0 auto;

@@ -1,0 +1,34 @@
+.about_us_container {
+  composes: container from "@/styles/utils.module.css";
+  composes: bg-white border-default from "@/styles/colors.module.css";
+  composes: body-paragraph from "@/styles/typography.module.css";
+
+  width: 90%;
+  min-height: 20rem;
+  max-width: 60rem;
+
+  margin: 3.95rem auto 2.88rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.about_us_title {
+  composes: bg-brand text-white from "@/styles/colors.module.css";
+  composes: body-title from "@/styles/typography.module.css";
+
+  width: 14rem;
+  height: 3.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -1.4rem;
+}
