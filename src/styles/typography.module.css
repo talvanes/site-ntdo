@@ -14,6 +14,13 @@
   line-height: 2.0em;
 }
 
+.body-title-large {
+  font-weight: 700;
+  font-size: 1.8em;
+  line-height: 1.6em;
+  text-transform: capitalize;
+}
+
 .body-title {
   font-weight: 700;
   font-size: 1.6em;
@@ -27,16 +34,16 @@
   line-height: 1.5em;
 }
 
+.body-paragraph-large {
+  font-weight: 400;
+  font-size: 2.0em;
+  line-height: 1.6em;
+}
+
 .body-paragraph {
   font-weight: 400;
   font-size: 1.8em;
   line-height: 1.6em;
-}
-
-.body-paragraph-large {
-  font-weight: 400;
-  font-size: 2.0em;
-  line-height: 1.8em;
 }
 
 .body-paragraph-small {

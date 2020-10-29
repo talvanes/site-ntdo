@@ -1,6 +1,9 @@
+.feature_card_list {
+  composes: bg-white text-default from "@/styles/colors.module.css";
+}
+
 .feature_card_list_container {
   composes: container from "@/styles/utils.module.css";
-  composes: bg-white from "@/styles/colors.module.css";
 
   display: flex;
   flex-direction: column;

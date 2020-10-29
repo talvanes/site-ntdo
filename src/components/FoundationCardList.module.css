@@ -1,0 +1,14 @@
+.mission_card_list {
+  composes: bg-grey text-default from "@/styles/colors.module.css";
+}
+
+.mission_card_list_container {
+  composes: container from "@/styles/utils.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}

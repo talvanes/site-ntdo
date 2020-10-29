@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import FeatureCardList from "@/components/FeatureCardList";
+import FoundationCardList from "@/components/FoundationCardList";
 
 export default function Home() {
   return (
@@ -52,7 +53,26 @@ export default function Home() {
         ]}
       />
 
-      {/* TODO Seção "Missão, Visão e Valores" */}
+      {/* Seção "Missão, Visão e Valores" */}
+      <FoundationCardList
+        missions={[
+          {
+            title: "Missão",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/mission-1.png"
+          },
+          {
+            title: "Visão",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/mission-2.png"
+          },
+          {
+            title: "Valores",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/mission-3.png"
+          }
+        ]}
+      />
 
       {/* TODO Seção "Cases" (clientes) */}
     </Layout>

@@ -9,7 +9,8 @@ interface FeatureCardListProps {
 
 export default function FeatureCardList({ features, title }: FeatureCardListProps) {
   return (
-    <section className={styles.feature_card_list_container}>
+    <section className={styles.feature_card_list}>
+      <div className={styles.feature_card_list_container}>
       {/* Optional Title */}
       {!!title && (
         <header>
@@ -25,6 +26,7 @@ export default function FeatureCardList({ features, title }: FeatureCardListProp
           path_to_image={feature.path_to_image}
         />
       ))}
+      </div>
     </section>
   );
 }
