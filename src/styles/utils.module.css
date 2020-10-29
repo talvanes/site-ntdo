@@ -13,3 +13,16 @@
 .display {
   display: flex;
 }
+
+/* Circle Image Container */
+.regular-image {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+}
+
+.large-image {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+}

@@ -1,0 +1,31 @@
+.feature_card_container {
+  composes: container from "@/styles/utils.module.css";
+  composes: body-paragraph-small from "@/styles/typography.module.css";
+  composes: text-default from "@/styles/colors.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  max-width: 20rem;
+}
+
+.feature_card_container + .feature_card_container {
+  margin-top: 3.5em;
+}
+
+.feature_card_title {
+  composes: body-title-small from "@/styles/typography.module.css";
+
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.feature_card_image {
+  composes: regular-image from "@/styles/utils.module.css";
+  composes: border-black from "@/styles/colors.module.css";
+
+  border-width: 2px;
+  margin-bottom: 0.6em;
+}

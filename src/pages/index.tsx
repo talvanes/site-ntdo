@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
+import FeatureCardList from "@/components/FeatureCardList";
 
 export default function Home() {
   return (
@@ -16,13 +17,44 @@ export default function Home() {
       {/* Hero Section */}
       <Hero title="nTDO" subtitle="Do Nada Ao Tudo" />
 
-      {/* TODO Seção "Sobre Nós" */}
+      {/* Seção "Sobre Nós" */}
       <AboutUs
         title="Sobre nós"
         description="Donec sed nulla urna. Duis sed leo nec tortor ultricies
         commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat
         laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. "
       />
+
+      {/* Seção "Nossos Serviços" */}
+      <FeatureCardList
+        title="Serviços"
+        features={[
+          {
+            title: "Gestão de Talentos",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/feature-1.png"
+          },
+          {
+            title: "Comunicação e Marketing",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/feature-2.png"
+          },
+          {
+            title: "Treinamento Gerencial",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/feature-3.png"
+          },
+          {
+            title: "Intermediação de Negócios",
+            description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
+            path_to_image: "/images/feature-4.png"
+          },
+        ]}
+      />
+
+      {/* TODO Seção "Missão, Visão e Valores" */}
+
+      {/* TODO Seção "Cases" (clientes) */}
     </Layout>
     </>
   )

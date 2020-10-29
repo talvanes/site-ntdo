@@ -4,10 +4,13 @@
   composes: body-paragraph from "@/styles/typography.module.css";
 
   width: 90%;
-  min-height: 20rem;
+  min-height: 10rem;
   max-width: 60rem;
 
   margin: 3.95rem auto 2.88rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+
   text-align: center;
 
   display: flex;
@@ -24,6 +27,9 @@
 
   width: 14rem;
   height: 3.8rem;
+
+  font-size: 1.0em;
+  line-height: 1.3em;
 
   display: flex;
   align-items: center;
