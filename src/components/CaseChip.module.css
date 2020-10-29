@@ -1,0 +1,30 @@
+.case_chip {
+  composes: body-paragraph-small from "@/styles/typography.module.css";
+  composes: text-white from "@/styles/colors.module.css";
+}
+
+.case_chip + .case_chip {
+  margin-top: 3.0em;
+}
+
+.case_chip_container {
+  composes: container from "@/styles/utils.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case_chip_title {
+  composes: body-title-small from "@/styles/typography.module.css";
+
+  line-height: 1.2em;
+}
+
+.case_chip_image {
+  composes: regular-image from "@/styles/utils.module.css";
+  composes: border-white from "@/styles/colors.module.css";
+
+  border-width: 5px;
+  margin-bottom: 0.6em;
+}

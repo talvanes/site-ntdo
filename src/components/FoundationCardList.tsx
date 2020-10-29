@@ -1,21 +1,23 @@
+import slug from "slug";
 import FoundationCard, { FoundationCardProps } from "@/components/FoundationCard";
 
 import styles from "./FoundationCardList.module.css";
 
 interface FoundationCardListProps {
-  missions: FoundationCardProps[];
+  foundations: FoundationCardProps[];
 }
 
-export default function FoundationCardList({ missions }: FoundationCardListProps) {
+export default function FoundationCardList({ foundations }: FoundationCardListProps) {
   return (
-    <section className={styles.mission_card_list}>
-      <div className={styles.mission_card_list_container}>
-        {/* Foundation, Vision and Values */}
-        {missions.map(mission => (
+    <section className={styles.foundation_card_list}>
+      <div className={styles.foundation_card_list_container}>
+        {/* Mission, Vision and Values */}
+        {foundations.map(foundation => (
           <FoundationCard
-            title={mission.title}
-            description={mission.description}
-            path_to_image={mission.path_to_image}
+            key={slug(foundation.title)}
+            title={foundation.title}
+            description={foundation.description}
+            path_to_image={foundation.path_to_image}
           />
         ))}
       </div>

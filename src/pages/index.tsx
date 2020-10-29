@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import FeatureCardList from "@/components/FeatureCardList";
 import FoundationCardList from "@/components/FoundationCardList";
+import CaseList from "@/components/CaseList";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
 
       {/* Seção "Missão, Visão e Valores" */}
       <FoundationCardList
-        missions={[
+        foundations={[
           {
             title: "Missão",
             description: "Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. Donec sed nulla urna. Duis sed leo nec tortor ultricies commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat laoreet, est ex porta tellus, sit amet varius nisi purus sit amet urna. ",
@@ -74,7 +75,20 @@ export default function Home() {
         ]}
       />
 
-      {/* TODO Seção "Cases" (clientes) */}
+      {/* Seção "Cases" (clientes) */}
+      <CaseList
+        title="Cases"
+        cases={[
+          {
+            title: "Econsa",
+            path_to_image: "/images/case-1.png",
+            link: "https://econsa.com.br"
+          }
+        ]}
+      />
+
+      {/* TODO Call-To-Action */}
+      {/* TODO Contato */}
     </Layout>
     </>
   )

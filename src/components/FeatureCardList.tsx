@@ -1,3 +1,4 @@
+import slug from "slug";
 import FeatureCard, { FeatureCardProps } from "@/components/FeatureCard";
 
 import styles from "./FeatureCardList.module.css";
@@ -11,21 +12,22 @@ export default function FeatureCardList({ features, title }: FeatureCardListProp
   return (
     <section className={styles.feature_card_list}>
       <div className={styles.feature_card_list_container}>
-      {/* Optional Title */}
-      {!!title && (
-        <header>
-          <h1 className={styles.feature_card_list_title}>{title}</h1>
-        </header>
-      )}
+        {/* Optional Title */}
+        {!!title && (
+          <header>
+            <h1 className={styles.feature_card_list_title}>{title}</h1>
+          </header>
+        )}
 
-      {/* List of Features */}
-      {features.map(feature => (
-        <FeatureCard
-          title={feature.title}
-          description={feature.description}
-          path_to_image={feature.path_to_image}
-        />
-      ))}
+        {/* List of Features */}
+        {features.map(feature => (
+          <FeatureCard
+            key={slug(feature.title)}
+            title={feature.title}
+            description={feature.description}
+            path_to_image={feature.path_to_image}
+          />
+        ))}
       </div>
     </section>
   );
