@@ -5,6 +5,7 @@ import AboutUs from "@/components/AboutUs";
 import FeatureCardList from "@/components/FeatureCardList";
 import FoundationCardList from "@/components/FoundationCardList";
 import CaseList from "@/components/CaseList";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -87,7 +88,9 @@ export default function Home() {
         ]}
       />
 
-      {/* TODO Call-To-Action */}
+      {/* Call-To-Action */}
+      <CTA title="Ficou interessado?" action_text="Enviar" />
+
       {/* TODO Contato */}
     </Layout>
     </>

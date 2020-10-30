@@ -1,0 +1,30 @@
+.cta {
+  composes: bg-black text-grey from "@/styles/colors.module.css";
+
+  padding-top: 5rem;
+  padding-bottom: 5.4rem;
+}
+
+.cta_container {
+  composes: container from "@/styles/utils.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta_title {
+  composes: body-title-large from "@/styles/typography.module.css";
+
+  margin-bottom: 2.2em;
+}
+
+.cta_button {
+  composes: body-text-cta-button from "@/styles/typography.module.css";
+  composes: bg-brand text-white from "@/styles/colors.module.css";
+
+  border: none;
+  border-radius: 0.3em;
+  width: 15.25rem;
+}
