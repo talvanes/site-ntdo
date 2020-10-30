@@ -1,3 +1,5 @@
+import Form from "./ContactForm";
+
 import styles from "./Contact.module.css";
 
 interface ContactProps {
@@ -14,7 +16,8 @@ export default function Contact({ title, subtitle }: ContactProps) {
           <p className={styles.contact_subtitle}>{subtitle}</p>
         </header>
 
-        {/* TODO Contact Form */}
+        {/* Contact Form */}
+        <Form />
       </div>
     </section>
   )

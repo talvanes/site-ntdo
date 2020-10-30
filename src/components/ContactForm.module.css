@@ -1,0 +1,51 @@
+
+.contact_form {
+  composes: input-text from "@/styles/typography.module.css";
+  composes: bg-grey from "@/styles/colors.module.css";
+
+  width: 100%;
+  max-width: 40rem;
+
+  margin-top: 2rem;
+}
+
+.contact_form_content {
+  composes: container from "@/styles/utils.module.css";
+  width: 100%;
+
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form_field {
+  composes: border-default from "@/styles/colors.module.css";
+
+  font-family: inherit;
+  border-width: 1px;
+  padding: 0.6em;
+  font-size: 0.9em;
+}
+
+.contact_form_field + .contact_form_field {
+  margin-top: 1.0em;
+}
+
+.contact_form_textarea_no_resize {
+  resize: none;
+}
+
+.contact_form_button {
+  composes: bg-brand text-grey from "@/styles/colors.module.css";
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.0em;
+
+  margin-top: 1.0rem;
+  border: none;
+  border-radius: 0.4em;
+  padding: 0.6em;
+}

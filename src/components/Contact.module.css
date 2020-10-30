@@ -25,7 +25,3 @@
   composes: text-white from "@/styles/colors.module.css";
   font-size: 0.9em;
 }
-
-.contact_form {
-
-}
