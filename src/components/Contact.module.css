@@ -1,0 +1,31 @@
+.contact {
+  composes: bg-default text-grey from "@/styles/colors.module.css";
+
+  padding-top: 5.2rem;
+  padding-bottom: 5rem;
+}
+
+.contact_content {
+  composes: container from "@/styles/utils.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_title {
+  composes: subpage-title from "@/styles/typography.module.css";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_subtitle {
+  composes: text-white from "@/styles/colors.module.css";
+  font-size: 0.9em;
+}
+
+.contact_form {
+
+}
