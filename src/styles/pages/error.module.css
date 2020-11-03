@@ -1,0 +1,43 @@
+.error {
+  composes: bg-grey text-default from "@/styles/colors.module.css";
+
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.error_container {
+  composes: container from "@/styles/utils.module.css";
+
+  width: 85%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.error_title {
+  composes: subpage-title from "@/styles/typography.module.css";
+  composes: text-black from "@/styles/colors.module.css";
+
+  font-size: 2.0em;
+}
+
+.error_subtitle {
+  composes: body-paragraph from "@/styles/typography.module.css";
+
+  font-size: 1.4em;
+  line-height: 1.0em;
+
+  margin-top: 0.5em;
+  margin-bottom: 1.5rem;
+}
+
+.error_description {
+  margin-top: 2.0rem;
+
+  composes: body-paragraph-small from "@/styles/typography.module.css";
+}
+
+.error_description_link {
+  composes: text-brand from "@/styles/colors.module.css";
+}
