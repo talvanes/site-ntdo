@@ -18,12 +18,49 @@ export default function Home() {
       home
     />
 
-    <Layout>
+    <Layout
+    sticky_menu_bar={true}
+    menu_entries={[
+      {
+        link: '/',
+        description: 'Início'
+      },
+      {
+        link: 'about',
+        description: 'Sobre',
+        anchor: true
+      },
+      {
+        link: 'services',
+        description: 'Serviços',
+        anchor: true
+      },
+      {
+        link: 'foundations',
+        description: 'Missão',
+        anchor: true
+      },
+      {
+        link: 'cases',
+        description: 'Cases',
+        anchor: true
+      },
+      {
+        link: 'contact',
+        description: 'Contato',
+        anchor: true
+      },
+      {
+        link: '/blog',
+        description: 'Blog'
+      }
+    ]}>
       {/* Hero Section */}
       <Hero title="nTDO" subtitle="Do Nada Ao Tudo" />
 
       {/* Seção "Sobre Nós" */}
       <AboutUs
+        id="about"
         title="Sobre nós"
         description="Donec sed nulla urna. Duis sed leo nec tortor ultricies
         commodo id in lectus. Suspendisse potenti. Fusce mollis, tortor sed feugiat
@@ -32,6 +69,7 @@ export default function Home() {
 
       {/* Seção "Nossos Serviços" */}
       <FeatureList
+        id="services"
         title="Serviços"
         features={[
           {
@@ -59,6 +97,7 @@ export default function Home() {
 
       {/* Seção "Missão, Visão e Valores" */}
       <FoundationList
+        id="foundations"
         foundations={[
           {
             title: "Missão",
@@ -80,6 +119,7 @@ export default function Home() {
 
       {/* Seção "Cases" (clientes) */}
       <ClientList
+        id="cases"
         title="Cases"
         clients={[
           {
@@ -94,7 +134,7 @@ export default function Home() {
       <CTA title="Ficou interessado?" action_text="Enviar" />
 
       {/* Contato */}
-      <Contact title="Contato" subtitle="Fale Conosco" />
+      <Contact id="contact" title="Contato" subtitle="Fale Conosco" />
     </Layout>
     </>
   )

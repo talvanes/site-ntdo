@@ -5,11 +5,12 @@ import styles from "./Contact.module.css";
 interface ContactProps {
   title: string;
   subtitle: string;
+  id?: string;
 }
 
-export default function Contact({ title, subtitle }: ContactProps) {
+export default function Contact({ title, subtitle, id }: ContactProps) {
   return (
-    <section className={styles.contact}>
+    <section id={id} className={styles.contact}>
       <div className={styles.contact_content}>
         <header className={styles.contact_title}>
           <h1>{title}</h1>

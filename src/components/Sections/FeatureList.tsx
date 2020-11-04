@@ -4,13 +4,14 @@ import FeatureCard, { FeatureCardProps } from "@/components/Cards/FeatureCard";
 import styles from "./FeatureList.module.css";
 
 interface FeatureListProps {
+  id?: string;
   features: FeatureCardProps[];
   title?: string;
 }
 
-export default function FeatureList({ features, title }: FeatureListProps) {
+export default function FeatureList({ features, title, id }: FeatureListProps) {
   return (
-    <section className={styles.feature_list}>
+    <section id={id} className={styles.feature_list}>
       <div className={styles.feature_list_container}>
         {/* Optional Title */}
         {!!title && (

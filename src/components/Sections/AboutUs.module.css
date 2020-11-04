@@ -1,13 +1,18 @@
+.about_us {
+  composes: body-paragraph from "@/styles/typography.module.css";
+
+  padding-top: 3.95rem;
+  padding-bottom: 2.88rem;
+}
+
 .about_us_container {
   composes: container from "@/styles/utils.module.css";
   composes: bg-white border-default from "@/styles/colors.module.css";
-  composes: body-paragraph from "@/styles/typography.module.css";
 
   width: 90%;
   min-height: 10rem;
   max-width: 60rem;
 
-  margin: 3.95rem auto 2.88rem;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
 

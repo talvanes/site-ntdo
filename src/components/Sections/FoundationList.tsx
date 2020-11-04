@@ -4,12 +4,13 @@ import FoundationCard, { FoundationCardProps } from "@/components/Cards/Foundati
 import styles from "./FoundationList.module.css";
 
 interface FoundationListProps {
+  id?: string;
   foundations: FoundationCardProps[];
 }
 
-export default function FoundationList({ foundations }: FoundationListProps) {
+export default function FoundationList({ foundations, id }: FoundationListProps) {
   return (
-    <section className={styles.foundation_list}>
+    <section id={id} className={styles.foundation_list}>
       <div className={styles.foundation_list_container}>
         {/* Mission, Vision and Values */}
         {foundations.map(foundation => (

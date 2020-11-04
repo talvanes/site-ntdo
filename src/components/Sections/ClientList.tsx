@@ -4,13 +4,14 @@ import ClientCard, { ClientCardProps } from "@/components/Cards/ClientCard";
 import styles from "./ClientList.module.css";
 
 interface ClientListProps {
+  id?: string;
   title?: string;
   clients: ClientCardProps[];
 }
 
-export default function ClientList({ clients, title }: ClientListProps) {
+export default function ClientList({ clients, title, id }: ClientListProps) {
   return (
-    <section className={styles.client_list}>
+    <section id={id} className={styles.client_list}>
       <div className={styles.client_list_container}>
         {/* Optional Title */}
         {!!title && (

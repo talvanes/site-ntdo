@@ -13,7 +13,16 @@ export default function Error() {
       home
     />
 
-    <Layout>
+    <Layout menu_entries={[
+      {
+        link: '/',
+        description: 'Início'
+      },
+      {
+        link: '/blog',
+        description: 'Blog'
+      }
+    ]}>
       <section className={styles.error}>
         <div className={styles.error_container}>
           <header className={styles.error_title}>
