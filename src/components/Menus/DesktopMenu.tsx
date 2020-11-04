@@ -18,20 +18,17 @@ export default function DesktopMenu({ entries }: DesktopMenuProps) {
     <nav className={styles.desktop_menu}>
       <ul className={styles.desktop_menu_container}>
         {entries.map(entry => (
-          <li className={styles.desktop_menu_item}>
+          <li key={entry.link} className={styles.desktop_menu_item}>
             {
               !!entry.external ? (
                 <a
-                key={entry.link}
                 href={entry.link}
                 target="_blank"
                 rel="noopener"
                 className={styles.desktop_menu_item_link}
                 >{entry.description}</a>
               ) : (
-                <Link
-                key={entry.link}
-                href={!!entry.anchor ? `#${entry.link}` : entry.link}>
+                <Link href={!!entry.anchor ? `#${entry.link}` : entry.link}>
                   <a className={styles.desktop_menu_item_link}>{entry.description}</a>
                 </Link>
               )
