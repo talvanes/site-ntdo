@@ -12,11 +12,11 @@
 }
 
 .desktop_menu_item {
-  margin: auto 0.8em;
+  margin: auto 0.5em;
 }
 
 .desktop_menu_item_link {
-  padding: 0.85em 0.8em;
+  padding: 0.85em 0.4em;
 }
 
 .desktop_menu_item_link:hover {
