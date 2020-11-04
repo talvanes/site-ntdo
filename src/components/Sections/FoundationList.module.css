@@ -1,8 +1,8 @@
-.foundation_card_list {
+.foundation_list {
   composes: bg-grey text-default from "@/styles/colors.module.css";
 }
 
-.foundation_card_list_container {
+.foundation_list_container {
   composes: container from "@/styles/utils.module.css";
 
   display: flex;

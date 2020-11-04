@@ -1,8 +1,8 @@
-.case_list {
+.client_list {
   composes: bg-default text-white from "@/styles/colors.module.css";
 }
 
-.case_list_container {
+.client_list_container {
   composes: container from "@/styles/utils.module.css";
 
   display: flex;
@@ -13,7 +13,7 @@
   padding-bottom: 4.5rem;
 }
 
-.case_list_title {
+.client_list_title {
   composes: text-grey from "@/styles/colors.module.css";
   composes: subpage-title from "@/styles/typography.module.css";
 

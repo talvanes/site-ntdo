@@ -1,21 +1,38 @@
 import { ReactNode } from "react";
 import Link from "next/link";
+import cn from "classnames";
 
+import DesktopMenu from "@/components/Menus/DesktopMenu";
+
+import utils from "@/styles/utils.module.css";
 import styles from "./Layout.module.css";
 
-interface LayoutProps {
-  children: ReactNode
+interface MenuEntryProps {
+  link: string;
+  description: string;
+  anchor?: boolean;
+  external?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
+interface LayoutProps {
+  children: ReactNode,
+  menu_entries: MenuEntryProps[],
+  sticky_menu_bar?: boolean;
+}
+
+export default function Layout({ children, menu_entries, sticky_menu_bar = false }: LayoutProps) {
   return (
     <>
     {/* Main header */}
-    <header className={styles.main_header}>
+    <header className={cn(styles.main_header, {
+      [utils.sticky_menu]: sticky_menu_bar
+    })}>
       <div className={styles.main_header_content}>
         <img src="/logo.svg" alt="nTDO"/>
 
-        {/* TODO desktop navigation menu */}
+        {/* desktop navigation menu */}
+        <DesktopMenu entries={menu_entries} />
+
         {/* TODO mobile navigation menu */}
       </div>
     </header>

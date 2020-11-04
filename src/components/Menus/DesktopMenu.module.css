@@ -1,0 +1,32 @@
+@value color-brand #990505;
+
+.desktop_menu {
+  composes: link-text from "@/styles/typography.module.css";
+
+  display: none;
+}
+
+.desktop_menu_container {
+  display: flex;
+  align-items: center;
+}
+
+.desktop_menu_item {
+  margin: auto 0.5em;
+}
+
+.desktop_menu_item_link {
+  padding: 0.85em 0.4em;
+}
+
+.desktop_menu_item_link:hover {
+  border-bottom: 3px solid color-brand;
+  color: color-brand;
+  font-weight: 500;
+}
+
+@media (min-width: 48rem) {
+  .desktop_menu {
+    display: flex;
+  }
+}

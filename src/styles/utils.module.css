@@ -26,3 +26,15 @@
   height: 12.5rem;
   border-radius: 50%;
 }
+
+/* Sticky menu */
+.sticky_menu {
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+}
+
+.sticky_top {
+  top: 3.75rem;
+}
