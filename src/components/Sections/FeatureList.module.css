@@ -1,8 +1,8 @@
-.feature_card_list {
+.feature_list {
   composes: bg-white text-default from "@/styles/colors.module.css";
 }
 
-.feature_card_list_container {
+.feature_list_container {
   composes: container from "@/styles/utils.module.css";
 
   display: flex;
@@ -13,7 +13,7 @@
   padding-bottom: 2rem;
 }
 
-.feature_card_list_title {
+.feature_list_title {
   composes: text-black from "@/styles/colors.module.css";
   composes: subpage-title from "@/styles/typography.module.css";
 

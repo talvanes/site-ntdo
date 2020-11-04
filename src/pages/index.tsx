@@ -1,12 +1,13 @@
 import SEO from "@/components/SEO";
 import Layout from "@/components/Layout";
-import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
-import FeatureCardList from "@/components/FeatureCardList";
-import FoundationCardList from "@/components/FoundationCardList";
-import CaseList from "@/components/CaseList";
-import CTA from "@/components/CTA";
-import Contact from "@/components/Contact";
+
+import Hero from "@/components/Sections/Hero";
+import AboutUs from "@/components/Sections/AboutUs";
+import FeatureList from "@/components/Sections/FeatureList";
+import FoundationList from "@/components/Sections/FoundationList";
+import ClientList from "@/components/Sections/ClientList";
+import CTA from "@/components/Sections/CTA";
+import Contact from "@/components/Sections/Contact";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
       />
 
       {/* Seção "Nossos Serviços" */}
-      <FeatureCardList
+      <FeatureList
         title="Serviços"
         features={[
           {
@@ -57,7 +58,7 @@ export default function Home() {
       />
 
       {/* Seção "Missão, Visão e Valores" */}
-      <FoundationCardList
+      <FoundationList
         foundations={[
           {
             title: "Missão",
@@ -78,9 +79,9 @@ export default function Home() {
       />
 
       {/* Seção "Cases" (clientes) */}
-      <CaseList
+      <ClientList
         title="Cases"
-        cases={[
+        clients={[
           {
             title: "Econsa",
             path_to_image: "/images/case-1.png",

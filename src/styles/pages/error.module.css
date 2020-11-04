@@ -9,6 +9,7 @@
   composes: container from "@/styles/utils.module.css";
 
   width: 85%;
+  max-width: 50rem;
 
   display: flex;
   flex-direction: column;

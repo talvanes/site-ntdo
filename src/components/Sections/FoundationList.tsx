@@ -1,16 +1,16 @@
 import slug from "slug";
-import FoundationCard, { FoundationCardProps } from "@/components/FoundationCard";
+import FoundationCard, { FoundationCardProps } from "@/components/Cards/FoundationCard";
 
-import styles from "./FoundationCardList.module.css";
+import styles from "./FoundationList.module.css";
 
-interface FoundationCardListProps {
+interface FoundationListProps {
   foundations: FoundationCardProps[];
 }
 
-export default function FoundationCardList({ foundations }: FoundationCardListProps) {
+export default function FoundationList({ foundations }: FoundationListProps) {
   return (
-    <section className={styles.foundation_card_list}>
-      <div className={styles.foundation_card_list_container}>
+    <section className={styles.foundation_list}>
+      <div className={styles.foundation_list_container}>
         {/* Mission, Vision and Values */}
         {foundations.map(foundation => (
           <FoundationCard

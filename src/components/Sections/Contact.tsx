@@ -1,4 +1,4 @@
-import Form from "./ContactForm";
+import Form from "@/components/Forms/ContactForm";
 
 import styles from "./Contact.module.css";
 
