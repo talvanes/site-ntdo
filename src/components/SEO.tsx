@@ -13,7 +13,7 @@ export default function SEO({ title, description, home = false }: SEOProps) {
     <Head>
       <title>{home ? title : `${title} ${SUFFIX}`}</title>
 
-      {!!description && <meta name="description" content={description}/>}
+      {!!description && <meta name="description" content={description} />}
     </Head>
   );
 }

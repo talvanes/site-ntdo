@@ -8,7 +8,6 @@
   align-items: center;
 
   text-align: center;
-  /* max-width: 20rem; */
 }
 
 .mission_card_container + .mission_card_container {

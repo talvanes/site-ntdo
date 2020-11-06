@@ -8,7 +8,7 @@ interface HeroProps {
 export default function Hero({ title, subtitle }: HeroProps) {
   return (
     <article className={styles.hero_container}>
-      <img className={styles.hero_background} src="/hero-background.png" alt="nTDO, do nada ao tudo!"/>
+      <img className={styles.hero_background} src="/hero-background.png" alt="nTDO, do nada ao tudo!" />
 
       <header className={styles.hero_content}>
         <h1 className={styles.hero_content_title}>{title}</h1>
