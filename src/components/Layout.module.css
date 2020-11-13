@@ -1,6 +1,8 @@
 /* Main header */
 .main_header {
   composes: bg-white from "@/styles/colors.module.css";
+
+  box-shadow: 1px 2px 2px rgb(0, 0, 0, 0.25);
 }
 
 .main_header_content {
