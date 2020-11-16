@@ -1,4 +1,7 @@
+import cn from "classnames";
 import Link from "next/link";
+
+import HamburgerButton from "@/components/Buttons/HamburgerButton";
 
 import styles from "./MobileMenu.module.css";
 
@@ -17,10 +20,10 @@ export default function MobileMenu({ entries }: MobileMenuProps) {
   return (
     <nav className={styles.mobile_menu}>
       {/* Ícone de Menu - TODO Criar Componente */}
-      <span className={styles.mobile_menu_icon}>X</span>
+      <HamburgerButton />
 
       {/* Menu Mobile */}
-      <ul className={styles.mobile_menu_submenu}>
+      <ul className={cn(styles.mobile_menu_submenu, styles.mobile_menu_submenu_no_display)}>
         {entries.map(entry => (
           <li key={entry.link} className={styles.mobile_menu_item}>
             {
