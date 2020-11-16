@@ -3,6 +3,7 @@ import Link from "next/link";
 import cn from "classnames";
 
 import DesktopMenu from "@/components/Menus/DesktopMenu";
+import MobileMenu from "@/components/Menus/MobileMenu";
 
 import utils from "@/styles/utils.module.css";
 import styles from "./Layout.module.css";
@@ -33,7 +34,8 @@ export default function Layout({ children, menu_entries, sticky_menu_bar = false
           {/* desktop navigation menu */}
           <DesktopMenu entries={menu_entries} />
 
-          {/* TODO mobile navigation menu */}
+          {/* mobile navigation menu */}
+          <MobileMenu entries={menu_entries} />
         </div>
       </header>
 

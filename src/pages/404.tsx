@@ -13,7 +13,7 @@ export default function Error() {
         home
       />
 
-      <Layout sticky_menu_bar={true} menu_entries={[
+      <Layout menu_entries={[
         {
           link: '/',
           description: 'Início'
