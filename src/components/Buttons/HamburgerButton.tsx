@@ -3,21 +3,18 @@ import { Motion, spring, presets } from "react-motion";
 
 import styles from "./HamburgerButton.module.css";
 
-export default function HamburgerButton() {
-  /* State: toggle button */
-  const [toggle, setToggle] = useState(false);
+interface HamburgerMenuProps {
+  toggle: boolean;
+  onToggle: () => void;
+}
 
-  /* Handler: button click */
-  const handleClick = useCallback(() => {
-    setToggle(state => !state);
-  }, []);
-
+export default function HamburgerButton({ toggle, onToggle }: HamburgerMenuProps) {
   return (
     <div className={styles.hamburger_button}>
       <div className={styles.hamburger_button_content}>
         {/* Use SVG here */}
         <svg className={styles.hamburger_button_svg} viewBox="0 0 96 96"
-          height="3rem" onClick={handleClick}>
+          height="3rem" onClick={onToggle}>
           <Motion style={{
             x: spring(Number(toggle), presets.wobbly),
             y: spring(Number(!toggle), presets.wobbly)

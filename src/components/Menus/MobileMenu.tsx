@@ -4,6 +4,7 @@ import Link from "next/link";
 import HamburgerButton from "@/components/Buttons/HamburgerButton";
 
 import styles from "./MobileMenu.module.css";
+import { useCallback, useState } from "react";
 
 interface MobileMenuEntry {
   link: string;
@@ -17,13 +18,23 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ entries }: MobileMenuProps) {
+  /* State: toggle menu */
+  const [toggle, setToggle] = useState(false);
+
+  /* Handle: toggle button */
+  const handleClick = useCallback(() => {
+    setToggle(state => !state);
+  }, []);
+
   return (
     <nav className={styles.mobile_menu}>
-      {/* Ícone de Menu - TODO Criar Componente */}
-      <HamburgerButton />
+      {/* Ícone de Menu */}
+      <HamburgerButton toggle={toggle} onToggle={handleClick} />
 
       {/* Menu Mobile */}
-      <ul className={cn(styles.mobile_menu_submenu, styles.mobile_menu_submenu_no_display)}>
+      <ul className={cn(styles.mobile_menu_submenu, {
+        [styles.mobile_menu_submenu_no_display]: !toggle
+      })}>
         {entries.map(entry => (
           <li key={entry.link} className={styles.mobile_menu_item}>
             {
