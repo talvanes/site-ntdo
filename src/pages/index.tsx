@@ -20,6 +20,7 @@ export default function Home() {
 
       <Layout
         sticky_menu_bar={true}
+        default_menu_item={'/'}
         menu_entries={[
           {
             link: '/',

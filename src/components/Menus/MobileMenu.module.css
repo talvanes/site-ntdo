@@ -44,7 +44,7 @@
   justify-content: center;
 }
 
-.mobile_menu_item_link:hover {
+.mobile_menu_item_link:hover, .mobile_menu_item_link_selected {
   background-color: color-brand;
   color: color-white;
   font-weight: 500;

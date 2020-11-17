@@ -1,8 +1,9 @@
+import { useCallback, useState } from "react";
 import cn from "classnames";
+
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-// import HamburgerButton from "@/components/Buttons/HamburgerButton";
 const HamburgerButton = dynamic(
   () => import("@/components/Buttons/HamburgerButton"),
   {
@@ -12,7 +13,6 @@ const HamburgerButton = dynamic(
 )
 
 import styles from "./MobileMenu.module.css";
-import { useCallback, useState } from "react";
 
 interface MobileMenuEntry {
   link: string;
@@ -23,9 +23,10 @@ interface MobileMenuEntry {
 
 interface MobileMenuProps {
   entries: MobileMenuEntry[];
+  selected_item: string;
 }
 
-export default function MobileMenu({ entries }: MobileMenuProps) {
+export default function MobileMenu({ entries, selected_item }: MobileMenuProps) {
   /* State: toggle menu */
   const [toggle, setToggle] = useState(false);
 
@@ -54,8 +55,10 @@ export default function MobileMenu({ entries }: MobileMenuProps) {
                   className={styles.mobile_menu_item_link}
                 >{entry.description}</a>
               ) : (
-                  <Link href={!!entry.anchor ? `#${entry.link}` : entry.link}>
-                    <a className={styles.mobile_menu_item_link}>{entry.description}</a>
+                  <Link href={!!entry.anchor ? `#${entry.link}` : entry.link} replace={!!entry.anchor}>
+                    <a className={cn(styles.mobile_menu_item_link, {
+                      [styles.mobile_menu_item_link_selected]: entry.link === selected_item
+                    })}>{entry.description}</a>
                   </Link>
                 )
             }

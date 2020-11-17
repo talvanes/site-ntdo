@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useCallback, useState } from "react";
 import Link from "next/link";
 import cn from "classnames";
 
@@ -19,9 +19,24 @@ interface LayoutProps {
   children: ReactNode,
   menu_entries: MenuEntryProps[],
   sticky_menu_bar?: boolean;
+  default_menu_item?: string | boolean;
 }
 
-export default function Layout({ children, menu_entries, sticky_menu_bar = false }: LayoutProps) {
+export default function Layout({
+  children,
+  menu_entries,
+  sticky_menu_bar = false,
+  default_menu_item = false
+}: LayoutProps) {
+  /* State: selected menu item */
+  const [selectedMenuItem, setSelectedMenuItem] = useState(default_menu_item);
+
+  /* TODO Handler: handles selected menu items */
+  const handleMenuSelection = useCallback(() => {
+    // get clicked link
+    // update choice
+  }, [selectedMenuItem]);
+
   return (
     <>
       {/* Main header */}
@@ -32,10 +47,10 @@ export default function Layout({ children, menu_entries, sticky_menu_bar = false
           <img src="/logo.svg" alt="nTDO" />
 
           {/* desktop navigation menu */}
-          <DesktopMenu entries={menu_entries} />
+          <DesktopMenu entries={menu_entries} selected_item={selectedMenuItem} />
 
           {/* mobile navigation menu */}
-          <MobileMenu entries={menu_entries} />
+          <MobileMenu entries={menu_entries} selected_item={selectedMenuItem} />
         </div>
       </header>
 
