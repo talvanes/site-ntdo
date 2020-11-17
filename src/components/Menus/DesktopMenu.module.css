@@ -19,7 +19,7 @@
   padding: 0.85em 0.4em;
 }
 
-.desktop_menu_item_link:hover {
+.desktop_menu_item_link:hover, .desktop_menu_item_link_selected {
   border-bottom: 3px solid color-brand;
   color: color-brand;
   font-weight: 500;

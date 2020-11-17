@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Layout from "@/components/Layout";
+import Layout, { DEFAULT_LINK } from "@/components/Layout";
 import SEO from "@/components/SEO";
 
 import styles from "@/styles/pages/error.module.css";
@@ -13,16 +13,19 @@ export default function Error() {
         home
       />
 
-      <Layout sticky_menu_bar={true} menu_entries={[
-        {
-          link: '/',
-          description: 'Início'
-        },
-        {
-          link: '/blog',
-          description: 'Blog'
-        }
-      ]}>
+      <Layout
+        sticky_menu_bar
+        menu_entries={[
+          {
+            link: DEFAULT_LINK,
+            description: 'Início'
+          },
+          {
+            link: 'blog',
+            description: 'Blog'
+          }
+        ]}>
+
         <section className={styles.error}>
           <div className={styles.error_container}>
             <header className={styles.error_title}>

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useCallback, useState } from "react";
 import Link from "next/link";
 import cn from "classnames";
 
@@ -19,9 +19,31 @@ interface LayoutProps {
   children: ReactNode,
   menu_entries: MenuEntryProps[],
   sticky_menu_bar?: boolean;
+  default_menu_item?: string;
 }
 
-export default function Layout({ children, menu_entries, sticky_menu_bar = false }: LayoutProps) {
+/* Default Anchor (and Page): "Início" */
+export const DEFAULT_LINK = '/';
+
+export default function Layout({
+  children,
+  menu_entries,
+  sticky_menu_bar = false,
+  default_menu_item = ''
+}: LayoutProps) {
+  /* State: selected menu item */
+  const [selectedMenuItem, setSelectedMenuItem] = useState(default_menu_item);
+
+  /* Handler: handles selected menu items */
+  const handleMenuSelection = useCallback((event) => {
+    // get clicked link
+    const clickedLinkElement = event.target;
+
+    // update choice
+    const [, anchorLink] = (clickedLinkElement.href as string).split('#');
+    setSelectedMenuItem(anchorLink || DEFAULT_LINK);
+  }, []);
+
   return (
     <>
       {/* Main header */}
@@ -32,10 +54,18 @@ export default function Layout({ children, menu_entries, sticky_menu_bar = false
           <img src="/logo.svg" alt="nTDO" />
 
           {/* desktop navigation menu */}
-          <DesktopMenu entries={menu_entries} />
+          <DesktopMenu
+            entries={menu_entries}
+            selected_item={selectedMenuItem}
+            selection_handler={handleMenuSelection}
+          />
 
           {/* mobile navigation menu */}
-          <MobileMenu entries={menu_entries} />
+          <MobileMenu
+            entries={menu_entries}
+            selected_item={selectedMenuItem}
+            selection_handler={handleMenuSelection}
+          />
         </div>
       </header>
 
