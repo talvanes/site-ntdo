@@ -55,7 +55,9 @@ export default function MobileMenu({ entries, selected_item }: MobileMenuProps) 
                   className={styles.mobile_menu_item_link}
                 >{entry.description}</a>
               ) : (
-                  <Link href={!!entry.anchor ? `#${entry.link}` : entry.link} replace={!!entry.anchor}>
+                  <Link
+                    href={!!entry.anchor ? `#${entry.link}` : entry.link}
+                    replace={!!entry.anchor}>
                     <a className={cn(styles.mobile_menu_item_link, {
                       [styles.mobile_menu_item_link_selected]: entry.link === selected_item
                     })}>{entry.description}</a>

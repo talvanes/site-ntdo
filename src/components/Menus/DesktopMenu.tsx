@@ -30,9 +30,11 @@ export default function DesktopMenu({ entries, selected_item }: DesktopMenuProps
                   className={styles.desktop_menu_item_link}
                 >{entry.description}</a>
               ) : (
-                  <Link href={!!entry.anchor ? `#${entry.link}` : entry.link} replace={!!entry.anchor}>
+                  <Link
+                    href={!!entry.anchor ? `#${entry.link}` : entry.link}
+                    replace={!!entry.anchor}>
                     <a className={cn(styles.desktop_menu_item_link, {
-                      [styles.desktop_menu_item_link_selected]: (entry.link === selected_item)
+                      [styles.desktop_menu_item_link_selected]: entry.link === selected_item
                     })}>{entry.description}</a>
                   </Link>
                 )

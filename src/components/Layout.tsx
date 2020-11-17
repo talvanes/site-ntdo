@@ -19,14 +19,14 @@ interface LayoutProps {
   children: ReactNode,
   menu_entries: MenuEntryProps[],
   sticky_menu_bar?: boolean;
-  default_menu_item?: string | boolean;
+  default_menu_item?: string;
 }
 
 export default function Layout({
   children,
   menu_entries,
   sticky_menu_bar = false,
-  default_menu_item = false
+  default_menu_item = ''
 }: LayoutProps) {
   /* State: selected menu item */
   const [selectedMenuItem, setSelectedMenuItem] = useState(default_menu_item);
