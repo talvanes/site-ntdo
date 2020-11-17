@@ -19,7 +19,7 @@ export default function Error() {
           description: 'Início'
         },
         {
-          link: '/blog',
+          link: 'blog',
           description: 'Blog'
         }
       ]}>

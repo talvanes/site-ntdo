@@ -1,7 +1,15 @@
 import cn from "classnames";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
-import HamburgerButton from "@/components/Buttons/HamburgerButton";
+// import HamburgerButton from "@/components/Buttons/HamburgerButton";
+const HamburgerButton = dynamic(
+  () => import("@/components/Buttons/HamburgerButton"),
+  {
+    loading: () => <p>Loading...</p>,
+    ssr: true
+  }
+)
 
 import styles from "./MobileMenu.module.css";
 import { useCallback, useState } from "react";
