@@ -24,9 +24,10 @@ interface MobileMenuEntry {
 interface MobileMenuProps {
   entries: MobileMenuEntry[];
   selected_item: string;
+  selection_handler: (event: any) => void;
 }
 
-export default function MobileMenu({ entries, selected_item }: MobileMenuProps) {
+export default function MobileMenu({ entries, selected_item, selection_handler }: MobileMenuProps) {
   /* State: toggle menu */
   const [toggle, setToggle] = useState(false);
 
@@ -58,9 +59,11 @@ export default function MobileMenu({ entries, selected_item }: MobileMenuProps) 
                   <Link
                     href={!!entry.anchor ? `#${entry.link}` : entry.link}
                     replace={!!entry.anchor}>
-                    <a className={cn(styles.mobile_menu_item_link, {
-                      [styles.mobile_menu_item_link_selected]: entry.link === selected_item
-                    })}>{entry.description}</a>
+                    <a
+                      onClick={selection_handler}
+                      className={cn(styles.mobile_menu_item_link, {
+                        [styles.mobile_menu_item_link_selected]: entry.link === selected_item
+                      })}>{entry.description}</a>
                   </Link>
                 )
             }

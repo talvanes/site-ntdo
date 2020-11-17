@@ -1,5 +1,5 @@
 import SEO from "@/components/SEO";
-import Layout from "@/components/Layout";
+import Layout, { DEFAULT_LINK } from "@/components/Layout";
 
 import Hero from "@/components/Sections/Hero";
 import AboutUs from "@/components/Sections/AboutUs";
@@ -20,10 +20,10 @@ export default function Home() {
 
       <Layout
         sticky_menu_bar={true}
-        default_menu_item={'/'}
+        default_menu_item={DEFAULT_LINK}
         menu_entries={[
           {
-            link: '/',
+            link: DEFAULT_LINK,
             description: 'Início'
           },
           {

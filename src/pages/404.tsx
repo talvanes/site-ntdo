@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Layout from "@/components/Layout";
+import Layout, { DEFAULT_LINK } from "@/components/Layout";
 import SEO from "@/components/SEO";
 
 import styles from "@/styles/pages/error.module.css";
@@ -15,7 +15,7 @@ export default function Error() {
 
       <Layout menu_entries={[
         {
-          link: '/',
+          link: DEFAULT_LINK,
           description: 'Início'
         },
         {

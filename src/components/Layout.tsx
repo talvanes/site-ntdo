@@ -22,6 +22,9 @@ interface LayoutProps {
   default_menu_item?: string;
 }
 
+/* Default Anchor (and Page): "Início" */
+export const DEFAULT_LINK = '/';
+
 export default function Layout({
   children,
   menu_entries,
@@ -31,11 +34,15 @@ export default function Layout({
   /* State: selected menu item */
   const [selectedMenuItem, setSelectedMenuItem] = useState(default_menu_item);
 
-  /* TODO Handler: handles selected menu items */
-  const handleMenuSelection = useCallback(() => {
+  /* Handler: handles selected menu items */
+  const handleMenuSelection = useCallback((event) => {
     // get clicked link
+    const clickedLinkElement = event.target;
+
     // update choice
-  }, [selectedMenuItem]);
+    const [, anchorLink] = (clickedLinkElement.href as string).split('#');
+    setSelectedMenuItem(anchorLink || DEFAULT_LINK);
+  }, []);
 
   return (
     <>
@@ -47,10 +54,18 @@ export default function Layout({
           <img src="/logo.svg" alt="nTDO" />
 
           {/* desktop navigation menu */}
-          <DesktopMenu entries={menu_entries} selected_item={selectedMenuItem} />
+          <DesktopMenu
+            entries={menu_entries}
+            selected_item={selectedMenuItem}
+            selection_handler={handleMenuSelection}
+          />
 
           {/* mobile navigation menu */}
-          <MobileMenu entries={menu_entries} selected_item={selectedMenuItem} />
+          <MobileMenu
+            entries={menu_entries}
+            selected_item={selectedMenuItem}
+            selection_handler={handleMenuSelection}
+          />
         </div>
       </header>
 

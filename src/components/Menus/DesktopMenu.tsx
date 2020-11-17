@@ -13,9 +13,10 @@ interface DesktopMenuEntry {
 interface DesktopMenuProps {
   entries: DesktopMenuEntry[];
   selected_item: string;
+  selection_handler: (event: any) => void;
 }
 
-export default function DesktopMenu({ entries, selected_item }: DesktopMenuProps) {
+export default function DesktopMenu({ entries, selected_item, selection_handler }: DesktopMenuProps) {
   return (
     <nav className={styles.desktop_menu}>
       <ul className={styles.desktop_menu_container}>
@@ -33,9 +34,10 @@ export default function DesktopMenu({ entries, selected_item }: DesktopMenuProps
                   <Link
                     href={!!entry.anchor ? `#${entry.link}` : entry.link}
                     replace={!!entry.anchor}>
-                    <a className={cn(styles.desktop_menu_item_link, {
-                      [styles.desktop_menu_item_link_selected]: entry.link === selected_item
-                    })}>{entry.description}</a>
+                    <a onClick={selection_handler}
+                      className={cn(styles.desktop_menu_item_link, {
+                        [styles.desktop_menu_item_link_selected]: entry.link === selected_item
+                      })}>{entry.description}</a>
                   </Link>
                 )
             }
