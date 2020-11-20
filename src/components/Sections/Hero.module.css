@@ -81,15 +81,19 @@
 
 /* 1920px */
 @media (min-width: 120.0em) {
+  .hero_background {
+    width: 80%;
+  }
+
   .hero_content {
     font-size: 2.5em;
-    padding-left: 6.0rem;
+    padding-left: 10%;
   }
 }
 
 /* 2560px */
 @media (min-width: 160.0rem) {
   .hero_content {
-    padding-left: 10.0rem;
+    padding-left: 20%;
   }
 }
