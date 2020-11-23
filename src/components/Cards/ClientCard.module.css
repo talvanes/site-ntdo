@@ -1,6 +1,11 @@
 .client_card {
   composes: body-paragraph-small from "@/styles/typography.module.css";
   composes: text-white from "@/styles/colors.module.css";
+
+  display: flex;
+  flex: 1;
+
+  padding: 1em 0 0 1em;
 }
 
 .client_card + .client_card {
@@ -13,12 +18,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .client_card_title {
   composes: body-title-small from "@/styles/typography.module.css";
 
   line-height: 1.2em;
+  text-align: center;
 }
 
 .client_card_image {
@@ -27,4 +35,36 @@
 
   border-width: 5px;
   margin-bottom: 0.6em;
+}
+
+/* 720px */
+@media (min-width: 45.0rem) {
+  .client_card {
+    flex: 0 0 50%;
+  }
+
+  .client_card + .client_card {
+    margin-top: 0;
+  }
+}
+
+/* 1024px */
+@media (min-width: 64.0rem) {
+  .client_card {
+    flex: 0 0 33.3333%;
+  }
+}
+
+/* 1440px */
+@media (min-width: 90.0rem) {
+  .client_card {
+    flex: 0 0 25%;
+  }
+}
+
+/* 1920px */
+@media (min-width: 120.0rem) {
+  .client_card {
+    flex: 0 0 20%;
+  }
 }

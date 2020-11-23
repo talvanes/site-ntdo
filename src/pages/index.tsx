@@ -127,6 +127,26 @@ export default function Home() {
               title: "Econsa",
               path_to_image: "/images/case-1.png",
               link: "https://econsa.com.br"
+            },
+            {
+              title: "Econsa Dois",
+              path_to_image: "/images/case-1.png",
+              link: "https://econsa.com.br"
+            },
+            {
+              title: "Econsa Três",
+              path_to_image: "/images/case-1.png",
+              link: "https://econsa.com.br"
+            },
+            {
+              title: "Econsa Quatro",
+              path_to_image: "/images/case-1.png",
+              link: "https://econsa.com.br"
+            },
+            {
+              title: "Econsa Cinco",
+              path_to_image: "/images/case-1.png",
+              link: "https://econsa.com.br"
             }
           ]}
         />
