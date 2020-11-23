@@ -8,14 +8,13 @@ export interface FoundationCardProps {
 
 export default function FoundationCard({ title, description, path_to_image }: FoundationCardProps) {
   return (
-    <article className={styles.mission_card_container}>
-      <header>
-        <img className={styles.mission_card_image} src={path_to_image} alt={title} />
+    <article className={styles.foundation_card_container}>
+      <img className={styles.foundation_card_image} src={path_to_image} alt={title} />
 
-        <h1 className={styles.mission_card_title}>{title}</h1>
+      <header className={styles.foundation_card_info}>
+        <h1 className={styles.foundation_card_title}>{title}</h1>
+        <p>{description}</p>
       </header>
-
-      <p>{description}</p>
     </article>
   )
 }

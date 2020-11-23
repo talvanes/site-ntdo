@@ -1,4 +1,4 @@
-.mission_card_container {
+.foundation_card_container {
   composes: container from "@/styles/utils.module.css";
   composes: body-paragraph-large from "@/styles/typography.module.css";
   composes: text-default from "@/styles/colors.module.css";
@@ -10,21 +10,41 @@
   text-align: center;
 }
 
-.mission_card_container + .mission_card_container {
+.foundation_card_container + .foundation_card_container {
   margin-top: 3.5em;
 }
 
-.mission_card_title {
+.foundation_card_title {
   composes: body-title-large from "@/styles/typography.module.css";
 
   line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
-.mission_card_image {
+.foundation_card_image {
   composes: large-image from "@/styles/utils.module.css";
   composes: border-black from "@/styles/colors.module.css";
 
   border-width: 2px;
   margin-bottom: 0.6em;
+}
+
+/* 900px */
+@media (min-width: 56.0rem) {
+  .foundation_card_container {
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .foundation_card_info {
+    text-align: left;
+  }
+
+
+  .foundation_card_image {
+    margin-bottom: 0;
+    margin-right: 2.0em;
+  }
 }
