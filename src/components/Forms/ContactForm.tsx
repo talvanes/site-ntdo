@@ -2,9 +2,13 @@ import cn from "classnames";
 
 import styles from "./ContactForm.module.css";
 
-export default function Form() {
+interface FormProps {
+  className?: string | undefined;
+}
+
+export default function Form({ className = "" }: FormProps) {
   return (
-    <form className={styles.contact_form} action="/" method="post">
+    <form className={cn(styles.contact_form, className)} action="/" method="post">
       <div className={styles.contact_form_content}>
         <input className={styles.contact_form_field} type="text" name="name" placeholder="Nome" />
 

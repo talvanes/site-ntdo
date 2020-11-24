@@ -15,20 +15,22 @@ export default function FeatureList({ features, title, id }: FeatureListProps) {
       <div className={styles.feature_list_container}>
         {/* Optional Title */}
         {!!title && (
-          <header>
-            <h1 className={styles.feature_list_title}>{title}</h1>
+          <header className={styles.feature_list_title}>
+            <h1>{title}</h1>
           </header>
         )}
 
         {/* List of Features */}
-        {features.map(feature => (
-          <FeatureCard
-            key={slug(feature.title)}
-            title={feature.title}
-            description={feature.description}
-            path_to_image={feature.path_to_image}
-          />
-        ))}
+        <div className={styles.feature_list_contents}>
+          {features.map(feature => (
+            <FeatureCard
+              key={slug(feature.title)}
+              title={feature.title}
+              description={feature.description}
+              path_to_image={feature.path_to_image}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

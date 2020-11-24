@@ -18,7 +18,7 @@ export default function Contact({ title, subtitle, id }: ContactProps) {
         </header>
 
         {/* Contact Form */}
-        <Form />
+        <Form className={styles.contact_form} />
       </div>
     </section>
   )

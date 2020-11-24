@@ -44,6 +44,8 @@ export default function Layout({
     setSelectedMenuItem(anchorLink || DEFAULT_LINK);
   }, []);
 
+  /* TODO Handler: handles menu anchor on scrolling page */
+
   return (
     <>
       {/* Main header */}

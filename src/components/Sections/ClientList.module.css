@@ -19,3 +19,22 @@
 
   margin-bottom: 2rem;
 }
+
+.client_list_contents {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+
+  margin: -1em 0 0 -1em;
+}
+
+/* 720px */
+@media (min-width: 45.0rem) {
+  .client_list_contents {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}

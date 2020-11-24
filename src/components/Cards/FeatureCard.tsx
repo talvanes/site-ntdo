@@ -8,7 +8,7 @@ export interface FeatureCardProps {
 
 export default function FeatureCard({ title, description, path_to_image }: FeatureCardProps) {
   return (
-    <article className={styles.feature_card_container}>
+    <article className={styles.feature_card}>
       <header>
         <img className={styles.feature_card_image} src={path_to_image} alt={title} />
 

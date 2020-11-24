@@ -15,20 +15,22 @@ export default function ClientList({ clients, title, id }: ClientListProps) {
       <div className={styles.client_list_container}>
         {/* Optional Title */}
         {!!title && (
-          <header>
-            <h1 className={styles.client_list_title}>{title}</h1>
+          <header className={styles.client_list_title}>
+            <h1>{title}</h1>
           </header>
         )}
 
         {/* List of Cases */}
-        {clients.map(client => (
-          <ClientCard
-            key={slug(client.title)}
-            title={client.title}
-            path_to_image={client.path_to_image}
-            link={client.link}
-          />
-        ))}
+        <div className={styles.client_list_contents}>
+          {clients.map(client => (
+            <ClientCard
+              key={slug(client.title)}
+              title={client.title}
+              path_to_image={client.path_to_image}
+              link={client.link}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

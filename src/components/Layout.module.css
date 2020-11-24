@@ -19,8 +19,8 @@
 .main_footer {
   composes: bg-white text-black from "@/styles/colors.module.css";
 
-  padding-bottom: 8.1em;
-  padding-top: 8.1em;
+  padding-top: 6.5em;
+  padding-bottom: 6.0em;
 }
 
 .main_footer_content {
@@ -29,17 +29,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-left: 4.0em;
+  padding-right: 4.0em;
 }
 
 .main_footer_links, .main_footer_legal {
   composes: link-text from "@/styles/typography.module.css";
 
-  width: 13rem;
-  flex: 1 0 auto;
+  width: 13.0rem;
+  flex: 1;
 }
 
 .main_footer_legal {
-  margin-top: 8.5em;
+  margin-top: 4.0em;
 }
 
 .main_footer_rights {
@@ -54,4 +57,24 @@
 
 .main_footer_rights a {
   color: #990505;
+}
+
+/* 720px */
+@media (min-width: 45.0rem) {
+  .main_footer_content {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .main_footer_links, .main_footer_legal {
+    margin: 0;
+    flex: 0 0 50%;
+  }
+}
+
+/* 1200px */
+@media (min-width: 75.0rem) {
+  .main_footer_links, .main_footer_legal {
+    flex: 0 0 25%;
+  }
 }
