@@ -25,3 +25,48 @@
   composes: text-white from "@/styles/colors.module.css";
   font-size: 0.9em;
 }
+
+.contact_form {
+  max-width: 32.0rem;
+}
+
+/* 900px */
+@media (min-width: 56.0rem) {
+  .contact_content {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+/* 1024px */
+@media (min-width: 64.0rem) {
+  .contact_content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* 1200px */
+@media (min-width: 75.0rem) {
+  .contact_content {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* 1440px */
+@media (min-width: 90.0rem) {
+  .contact_content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* 1920px */
+@media (min-width: 120.0rem) {
+  .contact_content {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}

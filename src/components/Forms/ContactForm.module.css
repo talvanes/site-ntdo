@@ -4,8 +4,6 @@
   composes: bg-grey from "@/styles/colors.module.css";
 
   width: 100%;
-  max-width: 40rem;
-
   margin-top: 2rem;
 }
 
